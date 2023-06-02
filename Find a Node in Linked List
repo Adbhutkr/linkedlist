@@ -1,0 +1,29 @@
+You have been given a singly linked list of integers. Write a function that returns the index/position of integer data denoted by 'N' (if it exists). Return -1 otherwise.
+Note :
+Assume that the Indexing for the singly linked list always starts from 0.
+Input format :
+The first line contains an Integer 'T' which denotes the number of test cases. 
+
+The first line of each test case or query contains the elements of the singly linked list separated by a single space. 
+
+The second line contains the integer value 'N'. It denotes the data to be searched in the given singly linked list.
+
+sol) 
+
+public class Solution {
+	public static int findNode(LinkedListNode<Integer> head, int n) 
+	{
+		LinkedListNode<Integer> temp = head; int count = 0;
+		while(temp!=null)
+		{
+           if(temp.data == n)
+		   {
+			   return count;
+			  
+		   }
+		   temp = temp.next;
+		   count ++;
+		}
+		return -1;
+	}
+}
